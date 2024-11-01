@@ -1,2 +1,2 @@
-# restaurant website using HTML CSS & JS.
+restaurant website using HTML CSS & JS.
  
