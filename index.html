@@ -9,8 +9,9 @@
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="bg-[#000]">
@@ -42,7 +43,6 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu hidden absolute top-[64px] w-full p-5 bg-black bg-opacity-50">
             <ul class="flex flex-col gap-5 items-center">
                 <li class='hover:underline text-[18px] text-[#3B82F6]'>
                     <a href="./index.html">Home</a>
@@ -61,67 +61,141 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-[74px] px-4 md:h-[650px] h-[450px] relative bg-cover bg-center bg-no-repeat" loading="lazy"
+    <section class="pt-[74px] px-4 md:h-[650px] h-[480px] relative bg-cover bg-center bg-no-repeat" loading="lazy"
         style="background-image: url('./images/hero-image/image-hero.jpg');">
         <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60">
             <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center">
                 <h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold">Welcome to restaurant
                     <span class="font-extrabold text-[#3B82F6] tracking-tighter">Sapphire</span>
                 </h1>
-                <div class="flex flex-col gap-3 mt-5">
+                <div class="flex flex-col gap-4 mt-5">
                     <div class="flex justify-center items-center">
-                        <p class="text-lg md:text-xl xl:text-2xl text-white font-semibold">Discover our delicious <span class="tracking-tight font-extrabold text-[#3B82F6]">menu</span> and make your <span class="tracking-tight font-extrabold text-[#3B82F6]">order now!</span></p>
+                        <p class="text-sm sm:text-lg md:text-xl xl:text-2xl text-white font-semibold text-center">
+                            Discover our
+                            delicious <span class="tracking-tight font-extrabold text-[#3B82F6]">menu</span> and make
+                            your <span class="tracking-tight font-extrabold text-[#3B82F6]">order now!</span></p>
                     </div>
 
                     <div class="flex justify-center items-center gap-5">
                         <a href="menu.html"
-                            class="hover:shadow-[inset_0_0_10px] text-md md:text-lg xl:text-xl text-[#3B82F6] font-semibold border border-[#3B82F6] py-2 px-4 max-sm:px-3 max-sm:py-1.5 rounded backdrop-blur-sm transition-all duration-500">
+                            class="hover:shadow-[inset_0_0_10px] text-md md:text-lg xl:text-xl text-[#3B82F6] font-semibold border border-[#3B82F6] py-2 px-4 max-sm:px-3 max-sm:py-1.5 rounded backdrop-blur-sm transition-all duration-300">
                             View Menu
                         </a>
 
                         <p class="text-md md:text-lg xl:text-xl text-white font-semibold">Or</p>
 
                         <a href="contact.html"
-                            class="hover:shadow-[inset_0_0_10px] text-md md:text-lg xl:text-xl text-white font-semibold border border-white py-2 px-4 max-sm:px-3 max-sm:py-1.5 rounded backdrop-blur-sm transition-all duration-500">
+                            class="hover:shadow-[inset_0_0_10px] text-md md:text-lg xl:text-xl text-white font-semibold border border-white py-2 px-4 max-sm:px-3 max-sm:py-1.5 rounded backdrop-blur-sm transition-all duration-300">
                             Contact Us
                         </a>
                     </div>
                 </div>
-
             </div>
+        </div>
     </section>
 
     <!-- About Section -->
     <section class="container mx-auto my-20 px-5 text-white">
-        <h2 class="text-4xl xl:text-4xl font-bold mb-5 text-center tracking-tighter underline underline-offset-8 decoration-[#3B82F6] decoration-4">About Our Restaurant</h2>
-
-        <div class="flex max-md:flex-col gap-5 min-h-[100px]">
-
-            <p class="text-lg md:text-xl xl:text-2xl leading-8 border-l-4 border-[#3B82F6] pl-3" style="font-family: 'Roboto';">
-                We’re a family-owned restaurant dedicated to providing a welcoming atmosphere and a memorable dining experience. Our menu, inspired by classic American cuisine, showcases a variety of dishes that highlight rich flavors and textures, crafted with quality ingredients and a creative touch. Whether you're visiting for a casual meal, a family gathering, or a special occasion, we strive to make every moment enjoyable. Our commitment to exceptional service means we're always looking for ways to enhance your experience, ensuring each guest feels valued and at home every time they dine with us.
+        <h2
+            class="text-4xl xl:text-4xl font-bold mb-8 text-center tracking-tighter underline underline-offset-8 decoration-[#3B82F6] decoration-4">
+            About Our Restaurant</h2>
+        <div class="flex max-md:flex-col gap-5">
+            <p class="text-lg md:text-xl xl:text-2xl leading-8 border-l-4 border-[#3B82F6] pl-3"
+                style="font-family: 'Roboto';">
+                We’re a family-owned restaurant dedicated to providing a welcoming atmosphere and a memorable dining
+                experience. Our menu, inspired by classic American cuisine, showcases a variety of dishes that highlight
+                rich flavors and textures, crafted with quality ingredients and a creative touch. Whether you're
+                visiting for a casual meal, a family gathering, or a special occasion, we strive to make every moment
+                enjoyable. Our commitment to exceptional service means we're always looking for ways to enhance your
+                experience, ensuring each guest feels valued and at home every time they dine with us.
             </p>
-
         </div>
 
     </section>
 
     <!-- Highlights Section -->
-    <section class="bg-gray-50 py-10">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-semibold mb-6">Our Highlights</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg p-6 rounded">
-                    <h3 class="text-xl font-bold mb-2">Featured Dish</h3>
-                    <p>Delicious dish description.</p>
+    <section class="container mx-auto bg-black py-16 px-6 lg:px-16 text-white">
+        <div class="mb-10">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white">Highlights</h2>
+            <p class="text-gray-400 mt-4">Experience our featured dishes, read what our
+                customers say, and explore our latest promotions.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <!-- Featured Dishes -->
+            <div class="bg-gray-800 rounded-lg p-5 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-utensils text-[#3B82F6] text-xl mr-3"></i>
+                    <h3 class="text-2xl font-semibold">Featured Dishes</h3>
                 </div>
-                <div class="bg-white shadow-lg p-6 rounded">
-                    <h3 class="text-xl font-bold mb-2">Customer Testimonials</h3>
-                    <p>“A must-visit place with incredible food!”</p>
+                <p class="text-gray-400">Our chef's signature creations, crafted to perfection.</p>
+                <ul class="mt-4 border-t border-gray-700 pt-4 space-y-2">
+                    <div class="flex flex-col items-start gap-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Signature Steak</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Gourmet Salad</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Truffle Pasta</span>
+                        </li>
+                    </div>
+                    <div class="flex flex-col items-start gap-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Seafood Paella</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Wood-Fired Pizza</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-[#3B82F6]"></i>
+                            <span class="text-white ml-3">Chocolate Lava Cake</span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+
+            <!-- Customer Testimonials -->
+            <div class="bg-gray-900 rounded-lg p-5 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-thumbs-up text-[#3B82F6] text-xl mr-3"></i>
+                    <h3 class="text-2xl font-semibold">Customer Testimonials</h3>
                 </div>
-                <div class="bg-white shadow-lg p-6 rounded">
-                    <h3 class="text-xl font-bold mb-2">Special Offers</h3>
-                    <p>Current promotions and offers.</p>
+                <p class="text-gray-400">Hear what our guests have to say about their experience.</p>
+                <div class="mt-4 space-y-4 border-t border-gray-700 pt-4">
+                    <blockquote class="text-sm italic text-gray-300">"Absolutely delightful! The ambiance and the food
+                        were top-notch!"</blockquote>
+                    <p class="text-gray-500 font-medium text-sm">- Sarah M.</p>
+                    <blockquote class="text-sm italic text-gray-300">"A hidden gem! Will definitely be back soon!"
+                    </blockquote>
+                    <p class="text-gray-500 font-medium text-sm">- John D.</p>
                 </div>
+            </div>
+
+            <!-- Ongoing Promotions -->
+            <div class="bg-gray-800 rounded-lg p-5 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tags text-[#3B82F6] text-xl mr-3"></i>
+                    <h3 class="text-2xl font-semibold">Ongoing Promotions</h3>
+                </div>
+                <p class="text-gray-400">Don’t miss our latest deals and offers!</p>
+                <ul class="mt-4 space-y-4 border-t border-gray-700 pt-4">
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-percent text-[#3B82F6]"></i>
+                        <span class="text-white">20% OFF on all appetizers this weekend!</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-glass-cheers text-[#3B82F6]"></i>
+                        <span class="text-white">Happy Hour: 50% off drinks from 5-7 PM daily.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
