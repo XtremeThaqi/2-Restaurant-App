@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>Restaurant - Reservation</title>
 </head>
+
 <body class="font-sans bg-gray-100 text-gray-800">
   <header class="bg-gray-900 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
@@ -19,12 +21,21 @@
     </div>
   </header>
 
-  <section class="container mx-auto my-10 px-4">
-    <h2 class="text-3xl font-semibold mb-6">Make a Reservation</h2>
-    <form class="bg-white p-6 rounded shadow-lg">
-      <div class="mb-4">
-        <label for="date" class="block text-lg font-medium">Date</label>
-        <input type="date" id="date" class="w-full border border-gray-300 p-2 rounded">
+  <section id="reservation" class="container mx-auto py-12">
+    <h2 class="text-3xl font-semibold text-center mb-8">Make a Reservation</h2>
+
+    <form class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
+      <div class="grid grid-cols-1 gap-6">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+          required>
+        <input type="tel" placeholder="Your Phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+        <input type="datetime-local" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+        <input type="number" placeholder="Number of Guests" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+          required>
+        <textarea placeholder="Special Requests" class="w-full px-4 py-2 border border-gray-300 rounded-lg"></textarea>
+        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Reserve
+          Table</button>
       </div>
-      <div class="mb-4">
-        <
+    </form>
+  </section>
