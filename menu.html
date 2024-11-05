@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 
@@ -57,8 +58,8 @@
     </div>
   </nav>
 
-  <section id="menu" class="container mx-auto pt-28 px-5">
-    <h2 class="text-3xl font-semibold mb-8">Our Menu</h2>
+  <section class="container mx-auto pt-28 px-5">
+    <h2 class="text-3xl font-semibold mb-2">Our Menu</h2>
 
     <div class="mb-8">
       <p class="text-xl text-gray-600">Discover our delicious menu with a variety of dishes to suit every taste and
@@ -68,14 +69,22 @@
     <!-- Buttons Section -->
     <div class="container mx-auto mb-8 flex">
       <div class="flex flex-wrap justify-start gap-5">
-        <button type="button" id="openAll" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">All</button>
-        <button id="openBreakfast" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Breakfast</button>
-        <button id="openLunch" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Lunch</button>
-        <button id="openDinner" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Dinner</button>
-        <button id="openDesserts" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Desserts</button>
-        <button id="openDrinks" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Drinks</button>
-        <button id="openSnacks" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Snacks</button>
-        <button id="openSalad" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Salads</button>
+        <button type="button" id="openAll"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">All</button>
+        <button id="openBreakfast"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Breakfast</button>
+        <button id="openLunch"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Lunch</button>
+        <button id="openDinner"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Dinner</button>
+        <button id="openDesserts"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Desserts</button>
+        <button id="openDrinks"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Drinks</button>
+        <button id="openSnacks"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Snacks</button>
+        <button id="openSalad"
+          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Salads</button>
       </div>
     </div>
 
@@ -145,7 +154,7 @@
           </div>
         </div>
         <div class="lunch-card">
-          <img src="./images/lunch3.jpg" alt="Lunch Image 3"> 
+          <img src="./images/lunch3.jpg" alt="Lunch Image 3">
           <div class="flex flex-col">
             <h3 class="text-2xl font-semibold mb-2">Lunch Item 3</h3>
             <p class="text-gray-600">Description of Lunch Item 3</p>
@@ -175,6 +184,54 @@
       </div>
     </section>
 
+    <!-- Dinner Section with images and descriptions -->
+    <section id="dinner" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="dinner-card">
+          <img src="./images/dinner1.jpg" alt="Dinner Image 1">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 1</h3>
+            <p class="text-gray-600">Description of Dinner Item 1</p>
+          </div>
+        </div>
+        <div class="dinner-card">
+          <img src="./images/dinner2.jpg" alt="Dinner Image 2">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 2</h3>
+            <p class="text-gray-600">Description of Dinner Item 2</p>
+          </div>
+        </div>
+        <div class="dinner-card">
+          <img src="./images/dinner3.jpg" alt="Dinner Image 3">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 3</h3>
+            <p class="text-gray-600">Description of Dinner Item 3</p>
+          </div>
+        </div>
+        <div class="dinner-card">
+          <img src="./images/dinner4.jpg" alt="Dinner Image 4">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 4</h3>
+            <p class="text-gray-600">Description of Dinner Item 4</p>
+          </div>
+        </div>
+        <div class="dinner-card">
+          <img src="./images/dinner5.jpg" alt="Dinner Image 5">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 5</h3>
+            <p class="text-gray-600">Description of Dinner Item 5</p>
+          </div>
+        </div>
+        <div class="dinner-card">
+          <img src="./images/dinner6.jpg" alt="Dinner Image 6">
+          <div class="dinner-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Dinner Item 6</h3>
+            <p class="text-gray-600">Description of Dinner Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Desserts Section with images and descriptions -->
     <section id="desserts" class="container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -193,7 +250,7 @@
           </div>
         </div>
         <div class="desserts-card">
-          <img src="./images/desserts3.jpg" alt="Desserts Image 3"> 
+          <img src="./images/desserts3.jpg" alt="Desserts Image 3">
           <div class="flex flex-col">
             <h3 class="text-2xl font-semibold mb-2">Desserts Item 3</h3>
             <p class="text-gray-600">Description of Desserts Item 3</p>
@@ -222,6 +279,159 @@
         </div>
       </div>
     </section>
+
+    <!-- Drinks Section with images and descriptions -->
+    <section id="drinks" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="drinks-card">
+          <img src="./images/drinks1.jpg" alt="Drinks Image 1">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 1</h3>
+            <p class="text-gray-600">Description of Drinks Item 1</p>
+          </div>
+        </div>
+        <div class="drinks-card">
+          <img src="./images/drinks2.jpg" alt="Drinks Image 2">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 2</h3>
+            <p class="text-gray-600">Description of Drinks Item 2</p>
+          </div>
+        </div>
+        <div class="drinks-card">
+          <img src="./images/drinks3.jpg" alt="Drinks Image 3">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 3</h3>
+            <p class="text-gray-600">Description of Drinks Item 3</p>
+          </div>
+        </div>
+        <div class="drinks-card">
+          <img src="./images/drinks4.jpg" alt="Drinks Image 4">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 4</h3>
+            <p class="text-gray-600">Description of Drinks Item 4</p>
+          </div>
+        </div>
+        <div class="drinks-card">
+          <img src="./images/drinks5.jpg" alt="Drinks Image 5">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 5</h3>
+            <p class="text-gray-600">Description of Drinks Item 5</p>
+          </div>
+        </div>
+        <div class="drinks-card">
+          <img src="./images/drinks6.jpg" alt="Drinks Image 6">
+          <div class="drinks-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Drinks Item 6</h3>
+            <p class="text-gray-600">Description of Drinks Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Snack Section with images and descriptions -->
+    <section id="snacks" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="snack-card">
+          <img src="./images/snack1.jpg" alt="Snack Image 1">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 1</h3>
+            <p class="text-gray-600">Description of Snack Item 1</p>
+          </div>
+        </div>
+        <div class="snack-card">
+          <img src="./images/snack2.jpg" alt="Snack Image 2">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 2</h3>
+            <p class="text-gray-600">Description of Snack Item 2</p>
+          </div>
+        </div>
+        <div class="snack-card">
+          <img src="./images/snack3.jpg" alt="Snack Image 3">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 3</h3>
+            <p class="text-gray-600">Description of Snack Item 3</p>
+          </div>
+        </div>
+        <div class="snack-card">
+          <img src="./images/snack4.jpg" alt="Snack Image 4">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 4</h3>
+            <p class="text-gray-600">Description of Snack Item 4</p>
+          </div>
+        </div>
+        <div class="snack-card">
+          <img src="./images/snack5.jpg" alt="Snack Image 5">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 5</h3>
+            <p class="text-gray-600">Description of Snack Item 5</p>
+          </div>
+        </div>
+        <div class="snack-card">
+          <img src="./images/snack6.jpg" alt="Snack Image 6">
+          <div class="snack-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Snack Item 6</h3>
+            <p class="text-gray-600">Description of Snack Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Salads Section with images and descriptions -->
+    <section id="salad" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="salads-card">
+          <img src="./images/salads1.jpg" alt="Salads Image 1">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 1</h3>
+            <p class="text-gray-600">Description of Salads Item 1</p>
+          </div>
+        </div>
+        <div class="salads-card">
+          <img src="./images/salads2.jpg" alt="Salads Image 2">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 2</h3>
+            <p class="text-gray-600">Description of Salads Item 2</p>
+          </div>
+        </div>
+        <div class="salads-card">
+          <img src="./images/salads3.jpg" alt="Salads Image 3">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 3</h3>
+            <p class="text-gray-600">Description of Salads Item 3</p>
+          </div>
+        </div>
+        <div class="salads-card">
+          <img src="./images/salads4.jpg" alt="Salads Image 4">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 4</h3>
+            <p class="text-gray-600">Description of Salads Item 4</p>
+          </div>
+        </div>
+        <div class="salads-card">
+          <img src="./images/salads5.jpg" alt="Salads Image 5">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 5</h3>
+            <p class="text-gray-600">Description of Salads Item 5</p>
+          </div>
+        </div>
+        <div class="salads-card">
+          <img src="./images/salads6.jpg" alt="Salads Image 6">
+          <div class="salads-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Salads Item 6</h3>
+            <p class="text-gray-600">Description of Salads Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="hidden fixed bottom-5 right-5 py-3 px-5 bg-gray-800 rounded-full z-10 flex flex-col items-center">
+      <svg fill="#3B82F6" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M270.7 9.7C268.2 3.8 262.4 0 256 0s-12.2 3.8-14.7 9.7L197.2 112.6c-3.4 8-5.2 16.5-5.2 25.2l0 77-144 84L48 280c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 56 0 32 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8 144 0 0 32.7L133.5 468c-3.5 3-5.5 7.4-5.5 12l0 16c0 8.8 7.2 16 16 16l96 0 0-64c0-8.8 7.2-16 16-16s16 7.2 16 16l0 64 96 0c8.8 0 16-7.2 16-16l0-16c0-4.6-2-9-5.5-12L320 416.7l0-32.7 144 0 0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-24 0-32 0-56c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 18.8-144-84 0-77c0-8.7-1.8-17.2-5.2-25.2L270.7 9.7z" />
+      </svg>
+      <span class="text-white text-xs">Go Up</span>
+    </button>
 
   </section>
 
@@ -277,4 +487,5 @@
   <script src="./javascript/menu.js"></script>
   <script src="./javascript/index.js"></script>
 </body>
+
 </html>
