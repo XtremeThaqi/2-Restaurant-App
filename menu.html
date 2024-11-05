@@ -1,43 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Restaurant - Menu</title>
+  <title>Restaurant App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
-<body class="font-sans bg-gray-100 text-gray-800">
-  <!-- Header -->
-  <header class="bg-gray-900 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Restaurant Logo</h1>
-      <nav>
-        <a href="index.html" class="px-4">Home</a>
-        <a href="menu.html" class="px-4">Menu</a>
-        <a href="reservation.html" class="px-4">Reservation</a>
-        <a href="contact.html" class="px-4">Contact Us</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Menu Section -->
-  <section class="container mx-auto my-10 px-4">
-    <h2 class="text-3xl font-semibold mb-6">Our Menu</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded shadow-lg">
-        <h3 class="text-xl font-bold mb-2">Appetizers</h3>
-        <p class="text-lg">Description of appetizers.</p>
-        <p class="text-gray-700 mt-2">Price: $10</p>
-      </div>
-      <!-- Repeat for each category (Mains, Desserts, etc.) -->
+<body class="bg-[#000] text-white">
+
+  <!-- Header -->
+  <nav class="fixed top-0 w-full h-18 flex justify-around items-center z-10 py-4 bg-black bg-opacity-50 text-white">
+    <!-- Logo -->
+    <h2 class="cursor-default pointer-events-none select-none text-4xl max-md:text-3xl max-sm:text-2xl text-white">
+      Sapphire</h2>
+
+    <!-- Desktop Menu -->
+    <ul class="flex items-center gap-10 max-sm:hidden">
+      <li class='hover:underline text-[20px]'>
+        <a href="./index.html">Home</a>
+      </li>
+      <li class='hover:underline text-[20px] text-[#3B82F6]'>
+        <a href="./menu.html">Menu</a>
+      </li>
+      <li class='hover:underline text-[20px]'>
+        <a href="./reservation.html">Reservation</a>
+      </li>
+      <li class='hover:underline text-[20px]'>
+        <a href="./contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Menu -->
+    <div class='sm:hidden text-white cursor-pointer text-2xl' id='openMenu'>
+      <i class="fas fa-bars text-[#3B82F6]"></i>
     </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden absolute top-[64px] w-full p-5 bg-black bg-opacity-60">
+      <ul class="flex flex-col gap-5 items-center">
+        <li class='hover:underline text-[18px] text-[#3B82F6]'>
+          <a href="./index.html">Home</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./menu.html">Menu</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./reservation.html">Reservation</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="menu" class="container mx-auto pt-28 px-5">
+    <h2 class="text-3xl font-semibold mb-8">Our Menu</h2>
+
+    <div class="mb-8">
+      <p class="text-xl text-gray-600">Discover our delicious menu with a variety of dishes to suit every taste and
+        preference.</p>
+    </div>
+
+    <!-- Buttons Section -->
+    <div class="container mx-auto mb-8 flex">
+      <div class="flex flex-wrap justify-start gap-5">
+        <button type="button" id="openAll" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">All</button>
+        <button id="openBreakfast" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Breakfast</button>
+        <button id="openLunch" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Lunch</button>
+        <button id="openDinner" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Dinner</button>
+        <button id="openDesserts" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Desserts</button>
+        <button id="openDrinks" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Drinks</button>
+        <button id="openSnacks" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Snacks</button>
+        <button id="openSalad" class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Salads</button>
+      </div>
+    </div>
+
+    <!-- Breakfast Section with images and descriptions -->
+    <section id="breakfast" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="breakfast-card">
+          <img src="./images/breakfast1.jpg" alt="Breakfast Image 1">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 1</h3>
+            <p class="text-gray-600">Description of Breakfast Item 1</p>
+          </div>
+        </div>
+        <div class="breakfast-card">
+          <img src="./images/breakfast2.jpg" alt="Breakfast Image 2">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 2</h3>
+            <p class="text-gray-600">Description of Breakfast Item 2</p>
+          </div>
+        </div>
+        <div class="breakfast-card">
+          <img src="./images/breakfast3.jpg" alt="Breakfast Image 3">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 3</h3>
+            <p class="text-gray-600">Description of Breakfast Item 3</p>
+          </div>
+        </div>
+        <div class="breakfast-card">
+          <img src="./images/breakfast4.jpg" alt="Breakfast Image 4">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 4</h3>
+            <p class="text-gray-600">Description of Breakfast Item 4</p>
+          </div>
+        </div>
+        <div class="breakfast-card">
+          <img src="./images/breakfast5.jpg" alt="Breakfast Image 5">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 5</h3>
+            <p class="text-gray-600">Description of Breakfast Item 5</p>
+          </div>
+        </div>
+        <div class="breakfast-card">
+          <img src="./images/breakfast6.jpg" alt="Breakfast Image 6">
+          <div class="breakfast-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 6</h3>
+            <p class="text-gray-600">Description of Breakfast Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lunch Section with images and descriptions -->
+    <section id="lunch" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="lunch-card">
+          <img src="./images/lunch1.jpg" alt="Lunch Image 1">
+          <div class="lunch-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 1</h3>
+            <p class="text-gray-600">Description of Lunch Item 1</p>
+          </div>
+        </div>
+        <div class="lunch-card">
+          <img src="./images/lunch2.jpg" alt="Lunch Image 2">
+          <div class="lunch-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 2</h3>
+            <p class="text-gray-600">Description of Lunch Item 2</p>
+          </div>
+        </div>
+        <div class="lunch-card">
+          <img src="./images/lunch3.jpg" alt="Lunch Image 3"> 
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 3</h3>
+            <p class="text-gray-600">Description of Lunch Item 3</p>
+          </div>
+        </div>
+        <div class="lunch-card">
+          <img src="./images/lunch4.jpg" alt="Lunch Image 4">
+          <div class="lunch-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 4</h3>
+            <p class="text-gray-600">Description of Lunch Item 4</p>
+          </div>
+        </div>
+        <div class="lunch-card">
+          <img src="./images/lunch5.jpg" alt="Lunch Image 5">
+          <div class="lunch-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 5</h3>
+            <p class="text-gray-600">Description of Lunch Item 5</p>
+          </div>
+        </div>
+        <div class="lunch-card">
+          <img src="./images/lunch6.jpg" alt="Lunch Image 6">
+          <div class="lunch-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Lunch Item 6</h3>
+            <p class="text-gray-600">Description of Lunch Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts Section with images and descriptions -->
+    <section id="desserts" class="container mx-auto py-12 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="desserts-card">
+          <img src="./images/desserts1.jpg" alt="Desserts Image 1">
+          <div class="desserts-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 1</h3>
+            <p class="text-gray-600">Description of Desserts Item 1</p>
+          </div>
+        </div>
+        <div class="desserts-card">
+          <img src="./images/desserts2.jpg" alt="Desserts Image 2">
+          <div class="desserts-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 2</h3>
+            <p class="text-gray-600">Description of Desserts Item 2</p>
+          </div>
+        </div>
+        <div class="desserts-card">
+          <img src="./images/desserts3.jpg" alt="Desserts Image 3"> 
+          <div class="flex flex-col">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 3</h3>
+            <p class="text-gray-600">Description of Desserts Item 3</p>
+          </div>
+        </div>
+        <div class="desserts-card">
+          <img src="./images/desserts4.jpg" alt="Desserts Image 4">
+          <div class="desserts-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 4</h3>
+            <p class="text-gray-600">Description of Desserts Item 4</p>
+          </div>
+        </div>
+        <div class="desserts-card">
+          <img src="./images/desserts5.jpg" alt="Desserts Image 5">
+          <div class="desserts-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 5</h3>
+            <p class="text-gray-600">Description of Desserts Item 5</p>
+          </div>
+        </div>
+        <div class="desserts-card">
+          <img src="./images/desserts6.jpg" alt="Desserts Image 6">
+          <div class="desserts-card-description">
+            <h3 class="text-2xl font-semibold mb-2">Desserts Item 6</h3>
+            <p class="text-gray-600">Description of Desserts Item 6</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-4">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2024 Restaurant. All rights reserved.</p>
+  <div class="bg-gray-950 text-white pt-20">
+    <div class="container mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 p-5 md:p-10">
+      <!-- Name -->
+      <div class="flex flex-col">
+        <h2
+          class="relative text-4xl tracking-tight after:content-[''] after:absolute after:bg-[#3b82f6] after:w-44 after:top-12 after:left-0 after:h-1">
+          Sapphire</h2>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex flex-col gap-5">
+        <h2 class="text-2xl">Social Media</h2>
+
+        <div class="flex items-center gap-5">
+          <a href="##"><i class="fa-brands fa-github text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-instagram text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-linkedin text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-twitter text-xl text-[#3B82F6]"></i></a>
+        </div>
+      </div>
+
+      <!-- Working Time -->
+      <div class="flex flex-col gap-5">
+        <h2 class="text-2xl">Working Time</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Mon - Fri: 10:00 AM - 12:00 PM</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Sat - Sun: 12:00 AM - 8:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="flex flex-col gap-5">
+        <h2 class="text-2xl">Contact Information</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">422 Main Street, Chicago, USA</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Phone: (+1) 123-456-789 (24/7)</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Email: sapphire@gmail.com</p>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <!-- Copyright -->
+    <div class="text-center py-5">
+      <p class="text-sm sm:text-[15px] font-semibold">&copy; 2024 <span class="text-[#3B82F6]">Sapphire.</span> All
+        rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="./javascript/menu.js"></script>
+  <script src="./javascript/index.js"></script>
 </body>
 </html>
