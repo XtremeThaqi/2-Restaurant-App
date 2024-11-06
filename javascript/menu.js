@@ -21,12 +21,6 @@ const saladSection = document.querySelector("#salad");
 // DEFAULT SECTION |\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\
 allSection.classList.add("hidden");
 breakfastSection.classList.remove("hidden");
-lunchSection.classList.add("hidden");
-dinnerSection.classList.add("hidden");
-dessertsSection.classList.add("hidden");
-drinksSection.classList.add("hidden");
-snacksSection.classList.add("hidden");
-saladSection.classList.add("hidden");
 
 // ADD EVENT LISTENER TO all BUTTON |\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\
 all.addEventListener("click", () => {
@@ -127,7 +121,7 @@ salad.addEventListener("click", () => {
 // back to top button
 // |\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|
 
-// when scroll to 50% of the page see the button |\|\|\|\|\|\|\
+// when scroll to 50% of the page the button will appear |\|\|\|\|\|\|\
 const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   if (window.scrollY > window.innerHeight / 2) {
@@ -137,7 +131,20 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// scroll to top |\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\
+// scroll to top |\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|
 backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Get all buttons
+const buttons = document.querySelectorAll(".button");
+
+// Add event listener to each button
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove background color from all buttons
+    buttons.forEach((btn) => btn.classList.remove("bg-[#3B82F6]"));
+    // Add background color to the clicked button
+    button.classList.add("bg-[#3B82F6]");
+  });
 });

@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="bg-[#000] text-white">
+<body class="bg-[#000] text-white" style="font-family: 'Roboto';">
 
   <!-- Header -->
   <nav class="fixed top-0 w-full h-18 flex justify-around items-center z-10 py-4 bg-black bg-opacity-50 text-white">
@@ -42,10 +44,10 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu hidden absolute top-[64px] w-full p-5 bg-black bg-opacity-60">
       <ul class="flex flex-col gap-5 items-center">
-        <li class='hover:underline text-[18px] text-[#3B82F6]'>
+        <li class='hover:underline text-[18px]'>
           <a href="./index.html">Home</a>
         </li>
-        <li class='hover:underline text-[18px]'>
+        <li class='hover:underline text-[18px] text-[#3B82F6]'>
           <a href="./menu.html">Menu</a>
         </li>
         <li class='hover:underline text-[18px]'>
@@ -62,82 +64,137 @@
     <h2 class="text-3xl font-semibold mb-2">Our Menu</h2>
 
     <div class="mb-8">
-      <p class="text-xl text-gray-600">Discover our delicious menu with a variety of dishes to suit every taste and
+      <p class="text-xl text-gray-500">Discover our delicious menu with a variety of dishes to suit every taste and
         preference.</p>
     </div>
 
-    <!-- Buttons Section -->
+    <!-- Buttons Section To Open Different Sections -->
     <div class="container mx-auto mb-8 flex">
       <div class="flex flex-wrap justify-start gap-5">
         <button type="button" id="openAll"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">All</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">All</button>
         <button id="openBreakfast"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Breakfast</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Breakfast</button>
         <button id="openLunch"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Lunch</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Lunch</button>
         <button id="openDinner"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Dinner</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Dinner</button>
         <button id="openDesserts"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Desserts</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Desserts</button>
         <button id="openDrinks"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Drinks</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Drinks</button>
         <button id="openSnacks"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Snacks</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Snacks</button>
         <button id="openSalad"
-          class="border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Salads</button>
+          class="button border-2 shadow-[inset_0_0_5px#3b82f6] hover:shadow-none border-[#3B82F6] text-white w-24 py-2 rounded-lg transition-all duration-300 hover:border-[#1D4ED8] active:bg-[#3B82F6] focus:bg-[#3B82F6]">Salads</button>
       </div>
     </div>
 
     <!-- Breakfast Section with images and descriptions -->
-    <section id="breakfast" class="container mx-auto py-12 all hidden">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="breakfast-card">
-          <img src="./images/breakfast1.jpg" alt="Breakfast Image 1">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 1</h3>
-            <p class="text-gray-600">Description of Breakfast Item 1</p>
+    <section id="breakfast" class="container mx-auto py-10 all hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+        <!-- Breakfast Card 1 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img1.jpg" alt="Breakfast Image 1" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Eggs Benedict</div>
+            <p class="text-white mb-5">Mounds of thinly shaved ham sitting on toasted English muffins,
+              topped with poached eggs and a tangy homemade hollandaise sauce.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$6.99</span></p>
           </div>
         </div>
-        <div class="breakfast-card">
-          <img src="./images/breakfast2.jpg" alt="Breakfast Image 2">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 2</h3>
-            <p class="text-gray-600">Description of Breakfast Item 2</p>
+
+        <!-- Breakfast Card 2 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img2.jpg" alt="Breakfast Image 2" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Buttermilk Pancakes</div>
+            <p class="text-white mb-5">Buttermilk pancakes: Tender and airy, with a subtle tang from real buttermilk. Served warm and ready for your favorite toppings—perfect for a cozy start to your day!</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$8.99</span></p>
           </div>
         </div>
-        <div class="breakfast-card">
-          <img src="./images/breakfast3.jpg" alt="Breakfast Image 3">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 3</h3>
-            <p class="text-gray-600">Description of Breakfast Item 3</p>
+
+        <!-- Breakfast Card 3 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img3.jpg" alt="Breakfast Image 3" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Belgian Waffles</div>
+            <p class="text-white mb-5">Light and fluffy with deep pockets, perfect for holding toppings. Served with your choice of powdered sugar, fresh fruit, or syrup. A delightful classic!</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$10.99</span></p>
           </div>
         </div>
-        <div class="breakfast-card">
-          <img src="./images/breakfast4.jpg" alt="Breakfast Image 4">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 4</h3>
-            <p class="text-gray-600">Description of Breakfast Item 4</p>
+
+        <!-- Breakfast Card 4 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img4.jpg" alt="Breakfast Image 4" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Veggie Omelette</div>
+            <p class="text-white mb-5">This Veggie Omelet is a classic omelet stuffed with cooked red onions, peppers, mushrooms, and spinach.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$9.99</span></p>
           </div>
         </div>
-        <div class="breakfast-card">
-          <img src="./images/breakfast5.jpg" alt="Breakfast Image 5">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 5</h3>
-            <p class="text-gray-600">Description of Breakfast Item 5</p>
+
+        <!-- Breakfast Card 5 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img5.jpg" alt="Breakfast Image 5" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Breakfast Burrito</div>
+            <p class="text-white mb-5">Filled with spicy sausage, smoky scrambled eggs, shredded cheese, and a bright, fresh avocado-tomato salsa.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$11.99</span></p>
           </div>
         </div>
-        <div class="breakfast-card">
-          <img src="./images/breakfast6.jpg" alt="Breakfast Image 6">
-          <div class="breakfast-card-description">
-            <h3 class="text-2xl font-semibold mb-2">Breakfast Item 6</h3>
-            <p class="text-gray-600">Description of Breakfast Item 6</p>
+
+        <!-- Breakfast Card 6 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img6.jpg" alt="Breakfast Image 6" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Avocado Toast</div>
+            <p class="text-white mb-5">Freshly toasted bread topped with creamy mashed avocado, a sprinkle of sea salt, and a dash of pepper.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$6.99</span></p>
+          </div>
+        </div>
+
+        <!-- Breakfast Card 7 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img7.jpg" alt="Breakfast Image 7" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Yogurt Parfait</div>
+            <p class="text-white mb-5"> Layers of creamy yogurt, fresh berries, and crunchy granola, topped with a drizzle of honey.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$7.99</span></p>
+          </div>
+        </div>
+
+        <!-- Breakfast Card 8 -->
+        <div
+          class="border-2 border-gray-500 rounded-lg overflow-hidden max-w-[600px] hover:scale-105 hover:skew-x-1 hover:-skew-y-1 transition-all duration-500">
+          <img src="./assets/menu-images/breakfast-images/img8.jpeg" alt="Breakfast Image 8" loading="lazy"
+            class="w-full sm:h-52 h-44 object-cover">
+          <div class="px-4 pt-5 pb-3 flex flex-col border-t-2 border-gray-500">
+            <div class="text-lg sm:text-xl font-bold mb-4 text-[#3B82F6]">Smoothie Bowl</div>
+            <p class="text-white mb-5">A thick, blended smoothie topped with vibrant fruits, crunchy granola, and a sprinkle of seeds or nuts.</p>
+            <p class="text-white sm:text-lg">Price: <span class="text-[#3B82F6] font-bold">$9.99</span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Lunch Section with images and descriptions -->
-    <section id="lunch" class="container mx-auto py-12 all hidden">
+    <section id="lunch" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="lunch-card">
           <img src="./images/lunch1.jpg" alt="Lunch Image 1">
@@ -185,7 +242,7 @@
     </section>
 
     <!-- Dinner Section with images and descriptions -->
-    <section id="dinner" class="container mx-auto py-12 all hidden">
+    <section id="dinner" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="dinner-card">
           <img src="./images/dinner1.jpg" alt="Dinner Image 1">
@@ -233,7 +290,7 @@
     </section>
 
     <!-- Desserts Section with images and descriptions -->
-    <section id="desserts" class="container mx-auto py-12 all hidden">
+    <section id="desserts" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="desserts-card">
           <img src="./images/desserts1.jpg" alt="Desserts Image 1">
@@ -281,7 +338,7 @@
     </section>
 
     <!-- Drinks Section with images and descriptions -->
-    <section id="drinks" class="container mx-auto py-12 all hidden">
+    <section id="drinks" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="drinks-card">
           <img src="./images/drinks1.jpg" alt="Drinks Image 1">
@@ -329,7 +386,7 @@
     </section>
 
     <!-- Snack Section with images and descriptions -->
-    <section id="snacks" class="container mx-auto py-12 all hidden">
+    <section id="snacks" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="snack-card">
           <img src="./images/snack1.jpg" alt="Snack Image 1">
@@ -377,7 +434,7 @@
     </section>
 
     <!-- Salads Section with images and descriptions -->
-    <section id="salad" class="container mx-auto py-12 all hidden">
+    <section id="salad" class="hidden container mx-auto py-12 all hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="salads-card">
           <img src="./images/salads1.jpg" alt="Salads Image 1">
@@ -425,12 +482,12 @@
     </section>
 
     <!-- Back to top button -->
-    <button id="backToTop" class="hidden fixed bottom-5 right-5 py-3 px-5 bg-gray-800 rounded-full z-10 flex flex-col items-center">
-      <svg fill="#3B82F6" class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <button id="backToTop"
+      class="hidden fixed bottom-5 right-5 py-5 px-5 bg-gray-800 rounded-full z-10 transition-all duration-300 hover:bg-gray-700">
+      <svg fill="#3B82F6" class="sm:size-7 size-6 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path
           d="M270.7 9.7C268.2 3.8 262.4 0 256 0s-12.2 3.8-14.7 9.7L197.2 112.6c-3.4 8-5.2 16.5-5.2 25.2l0 77-144 84L48 280c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 56 0 32 0 24c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8 144 0 0 32.7L133.5 468c-3.5 3-5.5 7.4-5.5 12l0 16c0 8.8 7.2 16 16 16l96 0 0-64c0-8.8 7.2-16 16-16s16 7.2 16 16l0 64 96 0c8.8 0 16-7.2 16-16l0-16c0-4.6-2-9-5.5-12L320 416.7l0-32.7 144 0 0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-24 0-32 0-56c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 18.8-144-84 0-77c0-8.7-1.8-17.2-5.2-25.2L270.7 9.7z" />
       </svg>
-      <span class="text-white text-xs">Go Up</span>
     </button>
 
   </section>
