@@ -5,73 +5,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant - Contact Us</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body class="font-sans bg-gray-100 text-gray-800">
+<body class="bg-[#000] text-white" style="font-family: 'Roboto';">
+
   <!-- Header -->
-  <header class="bg-gray-900 text-white">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Restaurant Logo</h1>
-      <nav>
-        <a href="index.html" class="px-4">Home</a>
-        <a href="menu.html" class="px-4">Menu</a>
-        <a href="reservation.html" class="px-4">Reservation</a>
-        <a href="contact.html" class="px-4">Contact Us</a>
-      </nav>
+  <nav class="fixed top-0 w-full h-18 flex justify-around items-center z-10 py-4 bg-black bg-opacity-50 text-white">
+    <!-- Logo -->
+    <h2 class="cursor-default pointer-events-none select-none text-4xl max-md:text-3xl max-sm:text-2xl text-white">
+      Sapphire</h2>
+
+    <!-- Desktop Menu -->
+    <ul class="flex items-center gap-10 max-sm:hidden">
+      <li class='hover:underline text-[20px] text-[#3B82F6]'>
+        <a href="./index.html">Home</a>
+      </li>
+      <li class='hover:underline text-[20px]'>
+        <a href="./menu.html">Menu</a>
+      </li>
+      <li class='hover:underline text-[20px]'>
+        <a href="./reservation.html">Reservation</a>
+      </li>
+      <li class='hover:underline text-[20px]'>
+        <a href="./contact.html">Contact Us</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Menu -->
+    <div class='sm:hidden text-white cursor-pointer text-2xl' id='openMenu'>
+      <i class="fas fa-bars text-[#3B82F6]"></i>
     </div>
-  </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden absolute top-[64px] w-full p-5 bg-black bg-opacity-60">
+      <ul class="flex flex-col gap-5 items-center">
+        <li class='hover:underline text-[18px] text-[#3B82F6]'>
+          <a href="./index.html">Home</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./menu.html">Menu</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./reservation.html">Reservation</a>
+        </li>
+        <li class='hover:underline text-[18px]'>
+          <a href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Contact Section -->
-  <section class="container mx-auto my-10 px-4">
-    <h2 class="text-3xl font-semibold mb-6">Contact Us</h2>
+  <section class="container mx-auto my-10 px-4 mt-20">
+    <h2 class="text-3xl font-semibold mb-10">Contact Us</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Contact Information -->
       <div>
         <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
         <p class="mb-4">We'd love to hear from you! Reach out for reservations, questions, or feedback.</p>
-        <p class="mb-2"><strong>Address:</strong> 123 Main Street, City, Country</p>
+        <p class="mb-2"><strong>Address:</strong> 123 Main St, San Francisco, CA</p>
         <p class="mb-2"><strong>Phone:</strong> (123) 456-7890</p>
-        <p class="mb-4"><strong>Email:</strong> contact@restaurant.com</p>
+        <p class="mb-4"><strong>Email:</strong> sapphire@gmail.com</p>
 
         <!-- Google Map -->
         <div class="mt-6">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019619918596!2d-122.41941508532154!3d37.77492917975854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b7e6346d%3A0xc4b0b1dd12452810!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094105%2C%20USA!5e0!3m2!1sen!2sus!4v1634865429733!5m2!1sen!2sus"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            width="100%" height="290" style="border:0; border-radius: 10px" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
-      
+
       <!-- Contact Form -->
       <div>
         <h3 class="text-2xl font-bold mb-4">Send Us a Message</h3>
-        <form class="bg-white p-6 rounded shadow-lg">
+        <form class="bg-white p-6 rounded shadow-lg text-black">
           <div class="mb-4">
             <label for="name" class="block text-lg font-medium">Name</label>
-            <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Name">
+            <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Name"
+              required>
+            <p class="hidden text-red-500 text-[12px] mt-5" id="name-error">Please enter your name.</p>
           </div>
           <div class="mb-4">
             <label for="email" class="block text-lg font-medium">Email</label>
-            <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Email">
+            <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Email"
+              required>
+            <p class="hidden text-red-500 text-[12px] mt-5" id="email-error">Please enter a valid email address.</p>
           </div>
           <div class="mb-4">
             <label for="message" class="block text-lg font-medium">Message</label>
-            <textarea id="message" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Message"
+            <textarea id="message" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Message" required
               rows="5"></textarea>
+            <p class="hidden text-red-500 text-[12px] mt-5" id="message-error">Please enter a message.</p>
           </div>
           <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send Message</button>
         </form>
+      </div>
+      <!-- Success Message -->
+      <div class="hidden fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50"
+        id="successMessage">
+        <div class="border-4 border-[#3B82F6] p-5 rounded-lg flex flex-col items-center gap-5 bg-black bg-opacity-40">
+          <i class="fa-regular fa-circle-check text-6xl text-[#3B82F6]"></i>
+          <p class="text-2xl font-semibold text-center">Reservation confirmed</p>
+          <p class="text-white text-center">We will contact you shortly</p>
+          <button
+            class="w-40 bg-[#3B82F6] text-white py-2 rounded-lg hover:bg-[#1D4ED8] active:bg-[#3B82F6] transition-all duration-500"
+            id="closeMessage">
+            Close
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-4">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2024 Restaurant. All rights reserved.</p>
-      <p>123 Main Street, City, Country | (123) 456-7890</p>
+  <div class="bg-gray-950 text-white pt-20">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 p-5 md:p-10">
+      <!-- Name -->
+      <div class="flex flex-col items-center">
+        <h2
+          class="relative text-4xl tracking-tight after:content-[''] after:absolute after:bg-[#3b82f6] after:w-44 after:top-12 after:left-0 after:h-1">
+          Sapphire</h2>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Social Media</h2>
+
+        <div class="flex items-center gap-5">
+          <a href="##"><i class="fa-brands fa-github text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-instagram text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-linkedin text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-twitter text-xl text-[#3B82F6]"></i></a>
+        </div>
+      </div>
+
+      <!-- Working Time -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Working Time</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Mon - Fri: 10:00 AM - 12:00 PM</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Sat - Sun: 12:00 AM - 8:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Contact Information</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">422 Main Street, Chicago, USA</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Phone: (+1) 123-456-789 (24/7)</p>
+          <p class="text-sm sm:text-[15px] font-semibold text-[#3B82F6]">Email: sapphire@gmail.com</p>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <!-- Copyright -->
+    <div class="text-center py-5">
+      <p class="text-sm sm:text-[15px] font-semibold">&copy; 2024 <span class="text-[#3B82F6]">Sapphire.</span> All
+        rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="./assets/javascript/index.js"></script>
+  <script src="./assets/javascript/contact.js"></script>
 </body>
 
 </html>
