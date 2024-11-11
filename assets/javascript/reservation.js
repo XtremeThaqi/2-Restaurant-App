@@ -1,67 +1,51 @@
-// check form validation
-const form = document.getElementById("form");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
+  const fields = ["name", "email", "phone", "date", "guests", "message"];
 
-form.addEventListener("submit", (e) => {
+  // Function to hide all error and success messages initially
+  const hideMessages = () => {
+    document.getElementById("successMessage").classList.add("hidden");
+    fields.forEach((field) => {
+      const errorElement = document.getElementById(`${field}Error`);
+      if (errorElement) errorElement.classList.add("hidden");
+    });
+  };
+
+  // Form submission event listener
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const date = document.getElementById("date").value;
-    const guests = document.getElementById("guests").value;
-    const message = document.getElementById("messages").value;
+    hideMessages(); // Hide previous messages
 
-    // Error messages
-    const nameError = document.getElementById("nameError");
-    const emailError = document.getElementById("emailError");
-    const phoneError = document.getElementById('phoneError');
-    const dateError = document.getElementById("dateError");
-    const guestsError = document.getElementById("guestsError");
-    const messageError = document.getElementById("messageError");
+    let isValid = true; // Track if all fields are filled correctly
 
-    if (name == "") {
-        nameError.classList.remove("hidden");
-    } else {
-        nameError.classList.add("hidden");
+    fields.forEach((field) => {
+      const input = document.getElementById(field);
+      const errorElement = document.getElementById(`${field}Error`);
+
+      if (input && errorElement) {
+        if (input.value.trim() === "") {
+          // Check if field is empty
+          errorElement.classList.remove("hidden"); // Show field-specific error
+          errorElement.textContent = `You didn’t fill the ${field} section.`; // Custom error message
+          isValid = false; // Mark form as invalid
+        } else {
+          errorElement.classList.add("hidden"); // Hide error if field is valid
+        }
+      }
+    });
+
+    // Show either success or error message
+    if (isValid) {
+      document.getElementById("successMessage").classList.remove("hidden");
+      form.reset(); // Reset form only if all fields are valid
     }
+  });
 
-    if (email == "") {
-        emailError.classList.remove("hidden");
-    } else {
-        emailError.classList.add("hidden");
-    }
-
-    if (phone == "") {
-        phoneError.classList.remove("hidden");
-    } else {
-        phoneError.classList.add("hidden");
-    }
-
-    if (date == "") {
-        dateError.classList.remove("hidden");
-    } else {
-        dateError.classList.add("hidden");
-    }
-
-    if (guests == "") {
-        guestsError.classList.remove("hidden");
-    } else {
-        guestsError.classList.add("hidden");
-    }
-
-    if (message == "" ) {
-        messageError.classList.remove("hidden");
-    } else {
-        messageError.classList.add("hidden");
-    }    
-
-   
-
-    if (name != "" && email != "" && phone != "" && date != "" && message != "" && guests != "") {
-        form.submit();
-    }
-
-    if (name == "" || email == "" || phone == "" || date == "" || message == "" || guests == "") {
-        return false;
-    }
-
+  // Optional close button event to hide success message
+  const closeMessage = document.getElementById("closeMessage");
+  if (closeMessage) {
+    closeMessage.addEventListener("click", () => {
+      document.getElementById("successMessage").classList.add("hidden");
+    });
+  }
 });

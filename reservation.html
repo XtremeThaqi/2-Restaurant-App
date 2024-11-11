@@ -79,32 +79,32 @@
           <label for="name">Full Name</label>
           <input type="text" placeholder="Your Name" id="name" name="name"
             class="w-full px-4 py-2 mt-1 mb-4 border border-gray-300 rounded-lg">
-          <h2 class="text-[red] mb-2 -mt-4 hidden" id="nameError">Please enter a valid name</h2>
+          <p class="text-red-500 mb-2 -mt-4 hidden" id="nameError">Please enter a valid name</p>
 
           <label for="email">Email</label>
           <input type="email" placeholder="Your Email" id="email" name="email"
             class="w-full px-4 py-2 mb-4 mt-1 border border-gray-300 rounded-lg">
-          <h2 id="emailError">Please enter a valid email Email</h2>
+          <p class="text-[red] mb-2 -mt-4 hidden" id="emailError">Please enter a valid email Email</p>
 
           <label for="phone">Phone Number</label>
           <input type="tel" placeholder="Your Phone" id="phone" name="phone"
             class="w-full px-4 py-2 mb-4 mt-1 border border-gray-300 rounded-lg">
-          <h2 id="phoneError">Please enter a valid phone number</h2>
+          <p class="text-[red] mb-2 -mt-4 hidden" id="phoneError">Please enter a valid phone number</p>
 
           <label for="date">Date & Time</label>
           <input type="datetime-local" id="date" name="date"
             class="w-full px-4 py-2 border mb-4 mt-1 border-gray-300 rounded-lg">
-          <h2 id="dateError">Please enter a valid date</h2>
+          <p class="text-[red] mb-2 -mt-4 hidden" id="dateError">Please enter a valid date</p>
 
           <label for="guests">Number of Guests</label>
           <input type="number" placeholder="Number of Guests" id="guests" name="guests"
             class="w-full px-4 py-2 border border-gray-300 rounded-lg mt-1 mb-4">
-          <h2 id="guestsError">Please enter a valid number of guests</h2>
+          <p class="text-[red] mb-2 -mt-4 hidden" id="guestsError">Please enter a valid number of guests</p>
 
           <label for="special">Special Requests</label>
           <textarea placeholder="Special Requests" rows="3" id="message" name="message"
             class="w-full px-4 py-2 border border-gray-300 mt-1 mb-4 rounded-lg"></textarea>
-          <h2 id="messageError">Please enter a valid message</h2>
+          <p class="text-[red] mb-2 -mt-4 hidden" id="messageError">Please enter a valid message</p>
 
           <button type="submit" id="submit"
             class="w-full bg-[#3B82F6] text-white py-2 rounded-lg hover:bg-[#1D4ED8] active:bg-[#3B82F6] transition-all duration-500">
@@ -131,8 +131,57 @@
     </div>
   </section>
 
-  <script src="./assets/javascript/index.js"></script>
+  <!-- Footer -->
+  <div class="bg-gray-950 text-white pt-20">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 p-5 md:p-10">
+      <!-- Name -->
+      <div class="flex flex-col items-center">
+        <h2
+          class="relative text-4xl tracking-tight after:content-[''] after:absolute after:bg-[#3b82f6] after:w-44 after:top-12 after:left-0 after:h-1">
+          Sapphire</h2>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Social Media</h2>
+
+        <div class="flex items-center gap-5">
+          <a href="##"><i class="fa-brands fa-github text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-instagram text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-linkedin text-xl text-[#3B82F6]"></i></a>
+          <a href="##"><i class="fa-brands fa-twitter text-xl text-[#3B82F6]"></i></a>
+        </div>
+      </div>
+
+      <!-- Working Time -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Working Time</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Mon - Fri: 10:00 AM - 12:00 PM</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Sat - Sun: 12:00 AM - 8:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="flex flex-col gap-5 items-center">
+        <h2 class="text-2xl">Contact Information</h2>
+        <div class="space-y-3">
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">422 Main Street, Chicago, USA</p>
+          <p class="text-xs sm:text-[15px] font-semibold text-[#3B82F6]">Phone: (+1) 123-456-789 (24/7)</p>
+          <p class="text-sm sm:text-[15px] font-semibold text-[#3B82F6]">Email: sapphire@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center py-5">
+      <p class="text-sm sm:text-[15px] font-semibold">&copy; 2024 <span class="text-[#3B82F6]">Sapphire.</span> All
+        rights reserved.</p>
+    </div>
+  </div>
+
   <script src="./assets/javascript/reservation.js"></script>
+  <script src="./assets/javascript/index.js"></script>
 </body>
 
 </html>
