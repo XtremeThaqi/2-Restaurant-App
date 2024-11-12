@@ -23,7 +23,7 @@
 
     <!-- Desktop Menu -->
     <ul class="flex items-center gap-10 max-sm:hidden">
-      <li class='hover:underline text-[20px] text-[#3B82F6]'>
+      <li class='hover:underline text-[20px]'>
         <a href="./index.html">Home</a>
       </li>
       <li class='hover:underline text-[20px]'>
@@ -32,7 +32,7 @@
       <li class='hover:underline text-[20px]'>
         <a href="./reservation.html">Reservation</a>
       </li>
-      <li class='hover:underline text-[20px]'>
+      <li class='hover:underline text-[20px] text-[#3B82F6]'>
         <a href="./contact.html">Contact Us</a>
       </li>
     </ul>
@@ -45,7 +45,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu hidden absolute top-[64px] w-full p-5 bg-black bg-opacity-60">
       <ul class="flex flex-col gap-5 items-center">
-        <li class='hover:underline text-[18px] text-[#3B82F6]'>
+        <li class='hover:underline text-[18px]'>
           <a href="./index.html">Home</a>
         </li>
         <li class='hover:underline text-[18px]'>
@@ -54,7 +54,7 @@
         <li class='hover:underline text-[18px]'>
           <a href="./reservation.html">Reservation</a>
         </li>
-        <li class='hover:underline text-[18px]'>
+        <li class='hover:underline text-[18px] text-[#3B82F6]'>
           <a href="./contact.html">Contact Us</a>
         </li>
       </ul>
@@ -63,7 +63,7 @@
 
   <!-- Contact Section -->
   <section class="container mx-auto my-10 px-4 mt-20">
-    <h2 class="text-3xl font-semibold mb-10">Contact Us</h2>
+    <h2 class="text-3xl md:text-4xl text-center font-bold tracking-tight mt-32 mb-16">Contact Us</h2>
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Contact Information -->
       <div>
@@ -77,35 +77,65 @@
         <div class="mt-6">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019619918596!2d-122.41941508532154!3d37.77492917975854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b7e6346d%3A0xc4b0b1dd12452810!2s123%20Main%20St%2C%20San%20Francisco%2C%20CA%2094105%2C%20USA!5e0!3m2!1sen!2sus!4v1634865429733!5m2!1sen!2sus"
-            width="100%" height="290" style="border:0; border-radius: 10px" allowfullscreen="" loading="lazy"></iframe>
+            class="w-full h-[300px] border-0 rounded-xl" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
 
       <!-- Contact Form -->
       <div>
         <h3 class="text-2xl font-bold mb-4">Send Us a Message</h3>
-        <form class="bg-white p-6 rounded shadow-lg text-black">
+        <form class="bg-white p-6 rounded text-black" id="form">
+
+          <!-- Name Section -->
           <div class="mb-4">
-            <label for="name" class="block text-lg font-medium">Name</label>
-            <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Name"
-              required>
-            <p class="hidden text-red-500 text-[12px] mt-5" id="name-error">Please enter your name.</p>
+            <div class="w-full relative">
+              <input
+                class="peer w-full p-2 pt-6 pr-4 bg-inherit border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed border-gray-300 focus:border-blue-500"
+                type="text" placeholder="" name="username" id="username" />
+              <label
+                class="absolute text-gray-500 text-base duration-150 transform -translate-y-4 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#3B82F6]"
+                for="username">
+                Full Name
+              </label>
+            </div>
+            <p class="text-red-500 hidden" id="usernameError">Please enter a valid name</p>
           </div>
+
+          <!-- Email Section -->
           <div class="mb-4">
-            <label for="email" class="block text-lg font-medium">Email</label>
-            <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Email"
-              required>
-            <p class="hidden text-red-500 text-[12px] mt-5" id="email-error">Please enter a valid email address.</p>
+            <div class="w-full relative">
+              <input
+                class="peer w-full p-2 pt-6 pr-4 bg-inherit border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed border-gray-300 focus:border-blue-500"
+                type="email" placeholder="" name="email" id="email" />
+              <label
+                class="absolute text-gray-500 text-base duration-150 transform -translate-y-4 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#3B82F6]"
+                for="email">
+                Email
+              </label>
+            </div>
+            <p class="hidden text-red-500" id="emailError">Please enter a valid email address.</p>
           </div>
+          
+          <!-- Message Section -->
           <div class="mb-4">
-            <label for="message" class="block text-lg font-medium">Message</label>
-            <textarea id="message" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Message" required
-              rows="5"></textarea>
-            <p class="hidden text-red-500 text-[12px] mt-5" id="message-error">Please enter a message.</p>
+            <div class="w-full relative">
+              <textarea
+                class="peer w-full p-2 pt-6 pr-4 bg-inherit border-2 rounded-md outline-none transition disabled:opacity-70 disabled:cursor-not-allowed border-gray-300 focus:border-blue-500"
+                type="message" placeholder="" name="message" id="message" rows="5"></textarea>
+              <label
+                class="absolute text-gray-500 text-base duration-150 transform -translate-y-4 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 peer-focus:text-[#3B82F6]"
+                for="message">
+                Message
+              </label>
+            </div>
+            <p class="hidden text-red-500" id="messageError">Please enter a message.</p>
           </div>
-          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send Message</button>
+
+          <!-- Submit Button -->
+          <button type="submit" class="border-2 border-blue-500 text-[#3B82F6] px-4 py-2 rounded-md hover:bg-[#3B82F6] hover:text-white transition-all duration-500">Send Message</button>
         </form>
       </div>
+
       <!-- Success Message -->
       <div class="hidden fixed inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50"
         id="successMessage">
